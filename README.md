@@ -1,54 +1,69 @@
-\# Comparative Analysis of ML Methods for E-Commerce Analytics
+# E-Commerce Intelligence Hub: Sentiment & Churn Analytics
 
-\*\*Sentiment Classification and Customer Churn Prediction\*\*
+### 🚀 Strategic Customer Insight Dashboard | MSc Data Analytics Project
 
+**A Dual-Track Machine Learning Solution for Customer Experience (CX) Optimization**
 
+---
 
-\## Project Overview
+## 📌 Project Overview
+This project bridges the gap between **unstructured text data** and **structured behavioral analytics**. By strictly following the **CRISP-DM** methodology, we developed an end-to-end system that not only predicts *who* will leave the platform but understands *why* they are dissatisfied.
 
-This project investigates the application of machine learning to two critical e-commerce data types: text-based product reviews and structured behavioral data. We followed the \*\*CRISP-DM\*\* (Cross-Industry Standard Process for Data Mining) methodology to structure our research.
+This repository contains the code and resources for:
+1.  **Sentiment Intelligence (NLP):** Automated classification of product reviews to monitor brand health.
+2.  **Churn Risk Scoring:** Predictive modeling to identify high-risk banking/e-commerce customers.
 
+---
 
+## 📊 Key Performance Metrics (Updated)
 
+| Track | Champion Model | Accuracy | Key Metric |
+| :--- | :--- | :--- | :--- |
+| **Sentiment Analysis** | **Support Vector Machine (SVM)** | **84.56%** | **0.51 Kappa** (Moderate-Strong Agreement) |
+| **Churn Prediction** | **XGBoost Classifier** | **77.74%** | **0.836 ROC-AUC** (High Predictive Power) |
 
+> *Note: While Random Forest offered competitive accuracy, XGBoost was selected as the champion for Churn Prediction due to its superior stability in distinguishing between positive and negative classes (ROC-AUC).*
 
-\## Datasets
+---
 
-\* \*\*Sentiment Analysis\*\*: 568,000+ Amazon Fine Food Reviews.
+## 🛠️ Tech Stack & Methodology
 
-\* \*\*Churn Prediction\*\*: 10,000 Bank Customer Records used to identify at-risk users.
+* **Languages:** Python (Pandas, NumPy, Scikit-Learn), DAX (Power BI).
+* **Text Processing:** TF-IDF Vectorization (5,000 features), Bigram analysis.
+* **Data Handling:** **SMOTE** (Synthetic Minority Over-sampling) for class balancing.
+* **Explainable AI (XAI):**
+    * **LIME:** Used to visualize feature importance in text (e.g., "disappointed" = Negative).
+    * **SHAP:** Used to interpret behavioral drivers (e.g., Age & Balance impact).
 
+---
 
+## 💡 Strategic Business Insights
+* **Targeted Retention:** Analysis identified **inactive members aged 45-60** (specifically in Germany) as the highest churn risk segment.
+* **Voice of Customer:** The SVM model automates the processing of **568,000+ reviews**, reducing manual analysis time by ~90% while maintaining 84% accuracy.
+* **Risk Calibration:** The XGBoost model provides a "Churn Probability Score," enabling the marketing team to prioritize retention budgets for high-value customers.
 
-\## Methodology
+---
 
-\* \*\*Text Processing\*\*: Used TF-IDF vectorization with bigrams (5,000 features).
+## 📂 Repository Structure
+* `Code.ipynb` - The complete Jupyter Notebook pipeline.
+* `member1_results.csv` - NLP model benchmarking (SVM vs. Naive Bayes).
+* `member2_results.csv` - Churn model benchmarking (XGBoost vs. Random Forest).
+* `E-Commerce_Dashboard.pbix` - Interactive Power BI Executive Dashboard.
 
-\* \*\*Data Balancing\*\*: Applied \*\*SMOTE\*\* (Synthetic Minority Over-sampling Technique) to handle class imbalances.
+---
 
-\* \*\*Interpretability\*\*: Leveraged \*\*SHAP\*\* and \*\*LIME\*\* to explain model predictions for better business decision-making.
+## 👥 Authors
+* **Saatvik Reddy Gutha** (x24257460) - *Feature Engineering & Model Optimization*
+* **Dattathreya Chintalapudi** (x24212881) - *Data Pipeline & Visualization Strategy*
 
+---
 
-
-\## Key Results
-
-\* \*\*Sentiment Analysis\*\*: Support Vector Machines (SVM) outperformed Naive Bayes with \*\*78.9% accuracy\*\*.
-
-\* \*\*Churn Prediction\*\*: XGBoost was the top performer with \*\*86.7% accuracy\*\* and a \*\*0.869 ROC-AUC\*\*.
-
-
-
-\## Authors
-
-\* \*\*Saatvik Reddy Gutha\*\* (x24257460)
-
-\* \*\*Dattathreya Chintalapudi\*\* (x24212881)
-
-
-
-\## How to Run
-
-1\. Install dependencies: `pip install -r requirements.txt`
-
-2\. Run the Jupyter Notebook: `Code.ipynb`
-
+## ⚙️ How to Run
+1.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+2.  **Launch the Analysis:**
+    ```bash
+    jupyter notebook Code.ipynb
+    ```
